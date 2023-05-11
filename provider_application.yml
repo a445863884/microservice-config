@@ -70,5 +70,73 @@ info:
   version: $project.version$
   name: Cc
   phone: 111
+  ---
+server:
+  port: 8832
+  servlet:
+    context-path: /
+spring:
+  profiles: dev_1
+  application:
+    name: microservice-people
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dd?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+eureka:
+  instance:
+    hostname: localhost
+    appname: microservice-people
+    instance-id: microservice-people-hystrix-config-client:8832
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8833.cc.com:8833/eureka/
+info:
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
+  name: Cc
+  phone: 112
+  ---
+server:
+  port: 8832
+  servlet:
+    context-path: /
+spring:
+  profiles: test_1
+  application:
+    name: microservice-people
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dd?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+eureka:
+  instance:
+    hostname: localhost
+    appname: microservice-people
+    instance-id: microservice-people-hystrix-config-client:8832
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8833.cc.com:8833/eureka/
+info:
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
+  name: Cc
+  phone: 111
    
     
