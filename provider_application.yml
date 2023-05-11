@@ -37,9 +37,6 @@ info:
   version: $project.version$
   name: 崔潮
   phone: 112
-      
-     
-
 ---
 server:
   port: 8831
