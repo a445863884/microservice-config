@@ -9,7 +9,6 @@ server:
     context-path: /
 spring:
   profiles: dev
-spring:
   application:
     name: microservice-people
   datasource:
@@ -44,7 +43,6 @@ server:
     context-path: /
 spring:
   profiles: test
-spring:
   application:
     name: microservice-people
   datasource:
