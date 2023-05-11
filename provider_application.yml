@@ -68,7 +68,7 @@ info:
   groupId: $project.groupId$
   artifactId: $project.artifactId$
   version: $project.version$
-  name:CC
+  name: Cc
   phone: 111
    
     
