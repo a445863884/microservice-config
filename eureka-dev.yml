@@ -4,13 +4,13 @@ server:
     context-path: /
 eureka:
   server:
-    peer-node-read-timeout-ms: 1000 
+    peer-node-read-timeout-ms: 1000
   instance:
-    hostname: eureka8833.cc.com  
+    hostname: eureka8833.cc.com
   client:
-    register-with-eureka: false 
+    register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ 
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       
      
