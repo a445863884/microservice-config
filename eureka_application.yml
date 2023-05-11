@@ -3,19 +3,19 @@ spring:
     active:
     - dev  
 ---
-spring:
-  profiles: dev
 server:
   port: 8833
   servlet:
     context-path: /
+spring:
+  profiles: dev
 eureka:
   server:
     peer-node-read-timeout-ms: 1000 
   instance:
     hostname: eureka8833.cc.com  
   client:
-    register-with-eureka: false 
+    register-with-eureka: false
     fetch-registry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ 
@@ -23,12 +23,12 @@ eureka:
      
 
 ---
-spring:
-  profiles: test
 server:
   port: 8833
   servlet:
     context-path: /
+spring:
+  profiles: test
 eureka:
   server:
     peer-node-read-timeout-ms: 1000 
