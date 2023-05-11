@@ -1,0 +1,64 @@
+spring:
+  profiles:
+    active:
+    - dev  
+---
+server:
+  port: 8802
+  servlet:
+    context-path: /
+spring:
+  profiles: dev
+eureka:
+ client:
+    register-with-eureka: false
+    service-url:
+     defaultZone: http://eureka8833.cc.com:8833/eureka/
+feign:
+ hystrix:
+    enabled: true
+client:
+    config:
+      default:
+        connectTimeout: 9000
+        readTimeout: 9000
+ribbon:
+ readTimeout: 9000
+ connectTimeout: 9000
+hystrix:
+  command:
+   default:
+     execution:
+       isolation:
+        thread:
+           timeoutInMilliseconds: 3000
+---
+server:
+  port: 8802
+  servlet:
+    context-path: /
+spring:
+  profiles: test
+eureka:
+ client:
+    register-with-eureka: false
+    service-url:
+     defaultZone: http://eureka8833.cc.com:8833/eureka/
+feign:
+ hystrix:
+    enabled: true
+client:
+    config:
+      default:
+        connectTimeout: 9000
+        readTimeout: 9000
+ribbon:
+ readTimeout: 9000
+ connectTimeout: 9000
+hystrix:
+  command:
+   default:
+     execution:
+       isolation:
+        thread:
+           timeoutInMilliseconds: 3000
