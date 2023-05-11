@@ -34,7 +34,7 @@ info:
   groupId: $project.groupId$
   artifactId: $project.artifactId$
   version: $project.version$
-  name: �޳�
+  name: ดณฑ
   phone: 112
 ---
 server:
@@ -68,7 +68,7 @@ info:
   groupId: $project.groupId$
   artifactId: $project.artifactId$
   version: $project.version$
-  name: �޳�
+  name: ดณฑ
   phone: 111
    
     
